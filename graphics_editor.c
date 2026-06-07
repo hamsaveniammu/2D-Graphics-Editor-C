@@ -86,6 +86,11 @@ void eraseArea(int x, int y, int width, int height)
         }
     }
 }
+void modifyRectangle()
+{
+    eraseArea(5, 3, 10, 5);
+    drawRectangle(20, 8, 10, 5);
+}
 
 int main()
 {
@@ -96,6 +101,7 @@ int main()
     drawTriangle(30, 5, 5);
     drawCircle(40, 10, 4);
     eraseArea(5, 3, 10, 5);
+    modifyRectangle();
 
     displayCanvas();
 
