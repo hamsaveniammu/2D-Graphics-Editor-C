@@ -27,10 +27,27 @@ void displayCanvas()
         printf("\n");
     }
 }
+void drawRectangle(int x, int y, int width, int height)
+{
+    for(int i = y; i < y + height; i++)
+    {
+        for(int j = x; j < x + width; j++)
+        {
+            if(i == y || i == y + height - 1 ||
+               j == x || j == x + width - 1)
+            {
+                canvas[i][j] = '*';
+            }
+        }
+    }
+}
 
 int main()
 {
     initializeCanvas();
+
+    drawRectangle(5, 3, 10, 5);
+
     displayCanvas();
 
     return 0;
