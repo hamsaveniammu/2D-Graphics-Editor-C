@@ -48,6 +48,19 @@ void drawLine(int x, int y, int length)
         canvas[y][x + i] = '*';
     }
 }
+void drawTriangle(int x, int y, int size)
+{
+    for(int i = 0; i < size; i++)
+    {
+        canvas[y + i][x - i] = '*';
+        canvas[y + i][x + i] = '*';
+    }
+
+    for(int j = x - size + 1; j <= x + size - 1; j++)
+    {
+        canvas[y + size - 1][j] = '*';
+    }
+}
 
 int main()
 {
@@ -55,6 +68,7 @@ int main()
 
     drawRectangle(5, 3, 10, 5);
     drawLine(2, 15, 20);
+    drawTriangle(30, 5, 5);
 
     displayCanvas();
 
