@@ -41,12 +41,20 @@ void drawRectangle(int x, int y, int width, int height)
         }
     }
 }
+void drawLine(int x, int y, int length)
+{
+    for(int i = 0; i < length; i++)
+    {
+        canvas[y][x + i] = '*';
+    }
+}
 
 int main()
 {
     initializeCanvas();
 
     drawRectangle(5, 3, 10, 5);
+    drawLine(2, 15, 20);
 
     displayCanvas();
 
