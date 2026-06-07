@@ -106,6 +106,7 @@ int main()
     printf("4. Circle\n");
     printf("5. Delete Rectangle\n");
     printf("6. Modify Rectangle\n");
+    printf("7. Exit\n");
 
     printf("Enter choice: ");
     scanf("%d", &choice);
@@ -138,8 +139,8 @@ int main()
             modifyRectangle();
             break;
         case 7:
-            printf("7. Exit\n");
-           return 0;
+              printf("Exiting program...\n");
+             return 0;
         
 
         default:
