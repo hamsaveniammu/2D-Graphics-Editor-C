@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 #define ROWS 20
 #define COLS 50
@@ -135,6 +137,10 @@ int main()
             drawRectangle(5, 3, 10, 5);
             modifyRectangle();
             break;
+        case 7:
+            printf("7. Exit\n");
+           return 0;
+        
 
         default:
             printf("Invalid Choice\n");
