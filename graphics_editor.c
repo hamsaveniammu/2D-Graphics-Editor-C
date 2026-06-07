@@ -94,14 +94,51 @@ void modifyRectangle()
 
 int main()
 {
+    int choice;
+
     initializeCanvas();
 
-    drawRectangle(5, 3, 10, 5);
-    drawLine(2, 15, 20);
-    drawTriangle(30, 5, 5);
-    drawCircle(40, 10, 4);
-    eraseArea(5, 3, 10, 5);
-    modifyRectangle();
+    printf("1. Rectangle\n");
+    printf("2. Line\n");
+    printf("3. Triangle\n");
+    printf("4. Circle\n");
+    printf("5. Delete Rectangle\n");
+    printf("6. Modify Rectangle\n");
+
+    printf("Enter choice: ");
+    scanf("%d", &choice);
+
+    switch(choice)
+    {
+        case 1:
+            drawRectangle(5, 3, 10, 5);
+            break;
+
+        case 2:
+            drawLine(2, 15, 20);
+            break;
+
+        case 3:
+            drawTriangle(30, 5, 5);
+            break;
+
+        case 4:
+            drawCircle(40, 10, 4);
+            break;
+
+        case 5:
+            drawRectangle(5, 3, 10, 5);
+            eraseArea(5, 3, 10, 5);
+            break;
+
+        case 6:
+            drawRectangle(5, 3, 10, 5);
+            modifyRectangle();
+            break;
+
+        default:
+            printf("Invalid Choice\n");
+    }
 
     displayCanvas();
 
