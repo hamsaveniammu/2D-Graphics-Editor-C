@@ -76,6 +76,16 @@ void drawCircle(int xc, int yc, int r)
         }
     }
 }
+void eraseArea(int x, int y, int width, int height)
+{
+    for(int i = y; i < y + height; i++)
+    {
+        for(int j = x; j < x + width; j++)
+        {
+            canvas[i][j] = '_';
+        }
+    }
+}
 
 int main()
 {
@@ -85,6 +95,7 @@ int main()
     drawLine(2, 15, 20);
     drawTriangle(30, 5, 5);
     drawCircle(40, 10, 4);
+    eraseArea(5, 3, 10, 5);
 
     displayCanvas();
 
